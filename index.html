@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 픽셀 자동차 러너</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI 오버레이 -->
+        <div id="ui-overlay">
+            <div class="score-display">
+                <span id="score">0</span>
+                <span class="score-label">점</span>
+            </div>
+            <div class="distance-display">
+                <span id="distance">0</span>
+                <span class="distance-label">m</span>
+            </div>
+        </div>
+        
+        <!-- 시작 화면 -->
+        <div id="start-screen" class="overlay">
+            <h1 class="game-title">🚗 픽셀 카 러너</h1>
+            <p class="instruction">스페이스바 또는 터치로 점프!</p>
+            <button id="start-btn" class="pixel-btn">게임 시작</button>
+        </div>
+        
+        <!-- 게임오버 화면 -->
+        <div id="gameover-screen" class="overlay hidden">
+            <h1 class="gameover-title">💥 게임 오버</h1>
+            <div class="final-score">
+                <p>최종 점수: <span id="final-score">0</span>점</p>
+                <p>달린 거리: <span id="final-distance">0</span>m</p>
+            </div>
+            <button id="restart-btn" class="pixel-btn">다시 하기</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
